@@ -32,13 +32,13 @@ def bezier_curve(points, t):
 # массив управляющих точек, их кординаты
 ctr = np.array( [(50, 200), (150, 50), (250, 350)])
 
-t_values = np.linspace(0, 1, 3)
+t_values = np.linspace(0, 1, 50)
 curve_points = [bezier_curve(ctr, t) for t in t_values]
 
 # функция для перерисовки графика
 def update(points):
     # вот тута и задаются точки по которым строится кривая start
-    t_values = np.linspace(0, 1, 3)
+    t_values = np.linspace(0, 1, 50)
     curve_points = [bezier_curve(ctr[:3], t) for t in t_values]
 
     ax.clear()
